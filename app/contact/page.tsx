@@ -2,10 +2,9 @@
 
 import { FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { ContactForm } from '../components/contact-form';
-import ContactHero from './components/hero';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
 
-const socialLinks = [
+export const socialLinks = [
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/your-page',
@@ -26,7 +25,7 @@ const socialLinks = [
 const Contact = () => {
   return (
     <div className='h-full'>
-      <ContactHero />
+      <div className='h-[calc(100vh-100px)] bg-contact bg-cover bg-center bg-no-repeat'></div>
       <section className='bg-foreground '>
         <div className='container py-20 text-white grid grid-cols-2 gap-16 relative'>
           <div>

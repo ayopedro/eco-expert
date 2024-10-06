@@ -1,45 +1,41 @@
 import ServiceCard from './service-card';
 
-const SERVICES = [
+export const SERVICES = [
   {
     id: 1,
-    title: 'Disinfectant Cleaning',
+    title: 'Gardening & Fumigation services',
     description: 'from ₤10/4 meters',
     image: '/assets/disinfectant-cleaning.png',
-    width: 677,
-    height: 532,
   },
   {
     id: 4,
     title: 'General Cleaning',
     description: 'from ₤10/4 meters',
     image: '/assets/general-cleaning.png',
-    width: 380,
-    height: 532,
   },
   {
     id: 2,
     title: 'Window Cleaning',
     description: 'from ₤10/4 meters',
     image: '/assets/window-cleaning.png',
-    width: 380,
-    height: 532,
   },
   {
     id: 3,
     title: 'Deep Cleaning',
     description: 'from ₤10/4 meters',
     image: '/assets/deep-cleaning.png',
-    width: 380,
-    height: 532,
   },
   {
     id: 5,
     title: 'Carpet Cleaning',
     description: 'from ₤10/4 meters',
     image: '/assets/carpet-cleaning.png',
-    width: 380,
-    height: 532,
+  },
+  {
+    id: 6,
+    title: 'Customized cleaning contracts',
+    description: 'from ₤10/4 meters',
+    image: '/assets/carpet-cleaning.png',
   },
 ];
 
@@ -60,7 +56,7 @@ const Services = () => {
         </p>
       </div>
       <div className='grid grid-cols-3 gap-6 my-8'>
-        {SERVICES.map((service, idx) => (
+        {SERVICES.slice(0, 5).map((service, idx) => (
           <div
             className={idx === 0 ? 'col-span-2' : 'col-span-1'}
             key={service.id}
@@ -69,8 +65,6 @@ const Services = () => {
               title={service.title}
               description={service.description}
               image={service.image}
-              w={service.width}
-              h={service.height}
             />
           </div>
         ))}

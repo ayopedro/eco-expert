@@ -2,8 +2,6 @@ interface ServiceCardProps {
   title: string;
   description: string;
   image: string;
-  w: number;
-  h: number;
 }
 
 const ServiceCard = ({ title, description, image }: ServiceCardProps) => {
