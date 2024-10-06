@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  @apply max-w-[1440px] mx-auto px-4;
+}
+
+.btn-primary {
+  @apply bg-foreground text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-white text-black;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-[#289926] to-[#2B752A] text-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-gradient-to-r from-[#2B752A] to-[#289926];
+}
+
+.btn-outline {
+  @apply bg-white border border-black text-black;
+}
+
+.btn-outline:hover {
+  @apply bg-black text-white;
+}
+
+.btn {
+  @apply px-10 py-2 rounded-2xl;
+}
+
+.btn:hover {
+  @apply transition-all duration-300 ease-in-out;
+}
