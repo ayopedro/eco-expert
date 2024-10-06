@@ -1,26 +1,8 @@
 'use client';
 
-import { FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 import { ContactForm } from '../components/contact-form';
 import { APIProvider, Map } from '@vis.gl/react-google-maps';
-
-export const socialLinks = [
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/your-page',
-    icon: <FaInstagram />,
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/company/your-company',
-    icon: <FaLinkedin />,
-  },
-  {
-    name: 'X',
-    url: 'https://www.facebook.com/your-page',
-    icon: <FaXTwitter />,
-  },
-];
+import { socialLinks } from '../utils/helpers';
 
 const Contact = () => {
   return (
@@ -43,7 +25,12 @@ const Contact = () => {
               </h3>
               <div className='flex gap-4 mt-2'>
                 {socialLinks.map((link) => (
-                  <a href={link.url} key={link.name} className='text-2xl'>
+                  <a
+                    href={link.url}
+                    target='_blank'
+                    key={link.name}
+                    className='text-2xl'
+                  >
                     {link.icon}
                   </a>
                 ))}

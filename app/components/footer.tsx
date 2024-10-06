@@ -4,7 +4,7 @@ import { Grid, GridItem } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdMail } from 'react-icons/md';
-import { socialLinks } from '../contact/page';
+import { socialLinks } from '../utils/helpers';
 
 const Footer = () => {
   return (
@@ -75,7 +75,12 @@ const Footer = () => {
             <li>
               <div className='flex items-center gap-2'>
                 {socialLinks.map((link) => (
-                  <a href={link.url} key={link.name} className='text-2xl'>
+                  <a
+                    href={link.url}
+                    target='_blank'
+                    key={link.name}
+                    className='text-2xl'
+                  >
                     {link.icon}
                   </a>
                 ))}
