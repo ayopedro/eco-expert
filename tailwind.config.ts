@@ -17,6 +17,7 @@ const config: Config = {
       },
       backgroundImage: {
         hero: "url('/assets/hero.png')",
+        contact: "url('/assets/contact-hero.png')",
       },
     },
   },

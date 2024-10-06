@@ -41,7 +41,7 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className='bg-white rounded-lg p-6 h-fit'>
+    <div className='bg-white rounded-lg p-6 h-fit text-foreground'>
       <h2 className='text-xl font-semibold'>Contact Information</h2>
       <Divider my={6} />
       <form onSubmit={handleSubmit(onSubmit)}>

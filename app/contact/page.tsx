@@ -1,0 +1,84 @@
+'use client';
+
+import { FaInstagram, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
+import { ContactForm } from '../components/contact-form';
+import ContactHero from './components/hero';
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
+
+const socialLinks = [
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/your-page',
+    icon: <FaInstagram />,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/company/your-company',
+    icon: <FaLinkedin />,
+  },
+  {
+    name: 'X',
+    url: 'https://www.facebook.com/your-page',
+    icon: <FaXTwitter />,
+  },
+];
+
+const Contact = () => {
+  return (
+    <div className='h-full'>
+      <ContactHero />
+      <section className='bg-foreground '>
+        <div className='container py-20 text-white grid grid-cols-2 gap-16 relative'>
+          <div>
+            <h1 className='text-3xl font-semibold mb-4'>
+              Get in touch with us
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+              tempora mollitia, eos exercitationem amet eius aperiam unde
+              maiores tempore eum?
+            </p>
+            <div className='flex flex-col'>
+              <h3 className='text-xl font-semibold mt-10'>
+                Follow us on our socials:
+              </h3>
+              <div className='flex gap-4 mt-2'>
+                {socialLinks.map((link) => (
+                  <a href={link.url} key={link.name} className='text-2xl'>
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <h3 className='text-xl font-semibold mt-10'>Company address:</h3>
+            <p className='text-mint text-sm'>
+              Brixton Close, London, United Kingdom
+            </p>
+            <div className='mt-8'>
+              <APIProvider
+                apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
+              >
+                <Map
+                  style={{
+                    width: '580px',
+                    height: '435px',
+                    borderRadius: '10px',
+                  }}
+                  defaultCenter={{ lat: 22.54992, lng: 0 }}
+                  defaultZoom={3}
+                  gestureHandling={'greedy'}
+                  disableDefaultUI={true}
+                />
+              </APIProvider>
+            </div>
+          </div>
+          <div className='absolute top-[-25%] right-0'>
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Contact;
