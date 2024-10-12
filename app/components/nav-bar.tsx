@@ -8,6 +8,7 @@ import {
   DrawerOverlay,
   useDisclosure,
 } from '@chakra-ui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -48,7 +49,14 @@ const NavBar = () => {
   return (
     <nav className='bg-white h-16 flex items-center'>
       <div className='container flex justify-between items-center'>
-        <Link href='/'>LOGO</Link>
+        <Link href='/'>
+          <Image
+            src={'/logo/ecoexpert-black-mixed.png'}
+            alt='ecoexpert cleaning solutions services limited'
+            width={150}
+            height={50}
+          />
+        </Link>
         <div className='hidden md:flex items-center justify-between w-2/3'>
           <ul className='flex gap-10'>
             {links.map((link) => (
@@ -65,12 +73,20 @@ const NavBar = () => {
           <button className='btn btn-outline'>Book us</button>
         </div>
         <button ref={btnRef} onClick={onOpen} className='md:hidden'>
-          <HamburgerIcon />
+          <HamburgerIcon fontSize={20} />
         </button>
         <Drawer isOpen={isOpen} onClose={onClose} placement='right'>
           <DrawerOverlay />
-          <DrawerContent className='px-8 pt-16'>
-            <DrawerCloseButton />
+          <DrawerContent className='px-8 pt-4'>
+            <div className='flex mb-10'>
+              <Image
+                src={'/logo/ecoexpert-black-mixed.png'}
+                alt='ecoexpert cleaning solutions services limited'
+                width={150}
+                height={50}
+              />
+              <DrawerCloseButton />
+            </div>
             <ul className='flex flex-col gap-10 mb-16 text-lg'>
               {links.map((link) => (
                 <li
@@ -81,7 +97,9 @@ const NavBar = () => {
                       : ''
                   }
                 >
-                  <Link href={link.url}>{link.title}</Link>
+                  <Link href={link.url} onClick={onClose}>
+                    {link.title}
+                  </Link>
                 </li>
               ))}
             </ul>

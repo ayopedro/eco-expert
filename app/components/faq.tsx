@@ -15,7 +15,7 @@ const Faq = () => {
   return (
     <section className='bg-white py-16 md:py-32'>
       <div className='container flex flex-col text-foreground'>
-        <div className='flex flex-col'>
+        <div className='flex flex-col gap-4'>
           <h3 className='text-3xl font-semibold text-center'>FAQs</h3>
           <p className='text-center'>
             Some of the questions that might be bothering you, we have answers

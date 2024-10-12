@@ -4,13 +4,21 @@ import Link from 'next/link';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdMail } from 'react-icons/md';
 import { socialLinks } from '../utils/helpers';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className='bg-[#1C211C] text-white py-24 mt-auto'>
+    <footer className='bg-[#1C211C] text-white py-16 md:py-24 mt-auto'>
       <div className='container flex flex-col md:grid md:grid-cols-4 gap-12'>
         <div>
-          <h1 className='text-2xl font-bold'>LOGO</h1>
+          <Link href='/'>
+            <Image
+              src={'/logo/ecoexpert-white-mixed.png'}
+              alt='ecoexpert cleaning solutions services limited'
+              width={250}
+              height={100}
+            />
+          </Link>
           <p className='mt-4'>
             Where cleanliness meets affordability and technology to meet our
             client&apos;s needs
