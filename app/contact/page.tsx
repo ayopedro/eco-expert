@@ -7,9 +7,9 @@ import { socialLinks } from '../utils/helpers';
 const Contact = () => {
   return (
     <div className='h-full'>
-      <div className='h-[calc(100vh-100px)] bg-contact bg-cover bg-center bg-no-repeat'></div>
+      <div className='h-[50vh] md:h-[calc(100vh-100px)] bg-contact bg-cover bg-center bg-no-repeat'></div>
       <section className='bg-foreground '>
-        <div className='container py-20 text-white grid grid-cols-2 gap-16 relative'>
+        <div className='container py-20 text-white grid md:grid-cols-2 gap-16 relative'>
           <div>
             <h1 className='text-3xl font-semibold mb-4'>
               Get in touch with us
@@ -40,14 +40,12 @@ const Contact = () => {
             <p className='text-mint text-sm'>
               Brixton Close, London, United Kingdom
             </p>
-            <div className='mt-8'>
+            <div className='mt-8 md:w-[580px] h-[250px] md:h-[435px]'>
               <APIProvider
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
               >
                 <Map
                   style={{
-                    width: '580px',
-                    height: '435px',
                     borderRadius: '10px',
                   }}
                   defaultCenter={{ lat: 22.54992, lng: 0 }}
@@ -58,7 +56,7 @@ const Contact = () => {
               </APIProvider>
             </div>
           </div>
-          <div className='absolute top-[-25%] right-0'>
+          <div className='md:absolute md:top-[-25%] md:right-4'>
             <ContactForm />
           </div>
         </div>

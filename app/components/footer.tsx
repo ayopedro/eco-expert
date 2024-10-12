@@ -1,23 +1,30 @@
 'use client';
 
-import { Grid, GridItem } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdMail } from 'react-icons/md';
 import { socialLinks } from '../utils/helpers';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className='bg-[#1C211C] text-white py-24 mt-auto'>
-      <Grid templateColumns='repeat(4, 1fr)' gap={8} className='container'>
-        <GridItem>
-          <h1 className='text-2xl font-bold'>LOGO</h1>
+    <footer className='bg-[#1C211C] text-white py-16 md:py-24 mt-auto'>
+      <div className='container grid md:grid-cols-4 gap-12 md:gap-4'>
+        <div className='mr-4'>
+          <Link href='/'>
+            <Image
+              src={'/logo/ecoexpert-white-mixed.png'}
+              alt='ecoexpert cleaning solutions services limited'
+              width={250}
+              height={100}
+            />
+          </Link>
           <p className='mt-4'>
             Where cleanliness meets affordability and technology to meet our
             client&apos;s needs
           </p>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>OUR SERVICES</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
@@ -33,8 +40,8 @@ const Footer = () => {
               <Link href='/'>Disinfectant Cleaning</Link>
             </li>
           </ul>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>QUICK LINKS</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
@@ -47,33 +54,39 @@ const Footer = () => {
               <Link href='/'>Gallery</Link>
             </li>
             <li>
-              <Link href='/'>Services</Link>
+              <Link href='/services'>Services</Link>
             </li>
           </ul>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>GET IN TOUCH</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex items-center gap-2'>
                 <FaLocationDot />
                 <span>Brixton Close, London, United Kingdom</span>
-              </div>
+              </p>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex items-center gap-2'>
                 <FaPhone />
                 <span>+44 890-7171-298227</span>
-              </div>
+              </p>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex flex-wrap items-center gap-2'>
                 <MdMail />
-                <span>contactus@ecoexpertsolutions.co.uk</span>
-              </div>
+                <a
+                  href='mailto:contactus@ecoexpertsolutions.co.uk'
+                  target='_blank'
+                  className='text-wrap'
+                >
+                  Contact Us
+                </a>
+              </p>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-10 md:gap-4 mt-4'>
                 {socialLinks.map((link) => (
                   <a
                     href={link.url}
@@ -87,8 +100,8 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-        </GridItem>
-      </Grid>
+        </div>
+      </div>
     </footer>
   );
 };

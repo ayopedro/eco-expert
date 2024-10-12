@@ -45,7 +45,7 @@ export const ContactForm = () => {
       <h2 className='text-xl font-semibold'>Contact Information</h2>
       <Divider my={6} />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className='flex gap-8'>
+        <div className='flex flex-col md:flex-row gap-8'>
           <FormControl isInvalid={!!errors.firstName}>
             <FormLabel htmlFor='firstName' fontSize={'14px'}>
               First name
@@ -73,7 +73,7 @@ export const ContactForm = () => {
             </FormErrorMessage>
           </FormControl>
         </div>
-        <div className='flex gap-8 mt-6'>
+        <div className='flex gap-8 flex-col md:flex-row mt-6'>
           <FormControl isInvalid={!!errors.email}>
             <FormLabel htmlFor='email' fontSize={'14px'}>
               Email address

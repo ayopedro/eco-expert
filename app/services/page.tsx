@@ -4,12 +4,12 @@ import FaqComponent from '../components/faq';
 const Services = () => {
   return (
     <div className='h-full bg-white'>
-      <section className='container text-center flex flex-col items-center gap-4 py-20'>
+      <section className='container text-center flex flex-col items-center gap-4 py-10 md:py-20'>
         <h3 className='text-lemon text-lg font-semibold'>Services</h3>
-        <h2 className='text-5xl font-medium'>
+        <h2 className='text-3xl md:text-5xl font-medium'>
           We are passionate about cleaning
         </h2>
-        <p className='w-1/2 mx-auto'>
+        <p className='md:w-1/2 mx-auto'>
           We are committed to expanding our market presence by targeting
           eco-conscious homes and businesses. Our goal is to build a reputation
           for excellence, reliability, and environmental responsibility.
@@ -24,8 +24,8 @@ const Services = () => {
         </div>
       </section>
       <section className='bg-background'>
-        <div className='container py-28'>
-          <div className='grid grid-cols-3 gap-5'>
+        <div className='container py-14 md:py-28'>
+          <div className='grid md:grid-cols-3 gap-5'>
             {SERVICES.map(({ id, image, title }) => (
               <div key={id}>
                 <div

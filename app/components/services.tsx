@@ -41,8 +41,8 @@ export const SERVICES = [
 
 const Services = () => {
   return (
-    <section className='container py-20'>
-      <div className='flex items-center justify-between'>
+    <section className='container py-10 md:py-20'>
+      <div className='flex flex-col md:flex-row gap-4 items-center justify-between'>
         <div className='flex flex-col w-full'>
           <h3 className='text-lemon text-lg font-semibold'>Our Services</h3>
           <h2 className='text-3xl font-semibold'>
@@ -55,10 +55,10 @@ const Services = () => {
           for excellence, reliability, and environmental responsibility.
         </p>
       </div>
-      <div className='grid grid-cols-3 gap-6 my-8'>
+      <div className='grid md:grid-cols-3 gap-6 my-8'>
         {SERVICES.slice(0, 5).map((service, idx) => (
           <div
-            className={idx === 0 ? 'col-span-2' : 'col-span-1'}
+            className={idx === 0 ? 'md:col-span-2' : 'col-span-1'}
             key={service.id}
           >
             <ServiceCard
