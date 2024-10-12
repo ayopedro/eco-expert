@@ -5,8 +5,8 @@ import { ContactForm } from './contact-form';
 
 const Contact = () => {
   return (
-    <section className='bg-mint py-24'>
-      <div className='container flex justify-between'>
+    <section className='bg-mint py-12 md:py-24'>
+      <div className='container flex flex-col md:flex-row gap-8 md:gap-0 justify-between'>
         <div className='flex flex-col'>
           <h3 className='text-lg text-foreground font-semibold'>Contact us</h3>
           <h2 className='text-2xl font-semibold w-2/3'>

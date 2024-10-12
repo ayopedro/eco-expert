@@ -8,7 +8,7 @@ const ServiceCard = ({ title, description, image }: ServiceCardProps) => {
   return (
     <div>
       <div
-        className={'h-[532px] mb-2'}
+        className={'h-[266px] md:h-[532px] mb-2'}
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',

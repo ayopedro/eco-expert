@@ -35,7 +35,7 @@ const STEPS = [
 
 const Steps = () => {
   return (
-    <section className='bg-foreground py-32'>
+    <section className='bg-foreground py-16 md:py-32'>
       <div className='container flex flex-col text-white'>
         <div className='flex flex-col'>
           <h3 className='text-lemon text-lg font-semibold'>Steps</h3>
@@ -43,7 +43,7 @@ const Steps = () => {
             How does it work?
           </h2>
         </div>
-        <div className='flex mt-28 gap-10'>
+        <div className='flex flex-col md:flex-row mt-14 md:mt-28 gap-10'>
           {STEPS.map((step) => (
             <div
               key={step.id}

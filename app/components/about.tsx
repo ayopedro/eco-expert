@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { MdOutlineArrowOutward } from 'react-icons/md';
 const About = () => {
   return (
-    <section className='py-32 bg-white'>
-      <div className='container flex items-center justify-between'>
-        <div className='flex w-[70%]'>
+    <section className='py-16 md:py-32 bg-white'>
+      <div className='container flex flex-col md:flex-row items-center justify-between'>
+        <div className='flex md:w-[70%] mb-4 md:mb-0'>
           <Image
             src='/assets/cleaner.png'
             alt='about'
@@ -13,7 +13,7 @@ const About = () => {
             height={529}
           />
         </div>
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col gap-4 w-full'>
           <h3 className='text-lemon text-lg font-semibold'>About</h3>
           <h2 className='text-3xl font-semibold'>
             KEEPING YOUR HOMES AND SPARKY

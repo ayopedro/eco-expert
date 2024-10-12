@@ -1,6 +1,5 @@
 'use client';
 
-import { Grid, GridItem } from '@chakra-ui/react';
 import Link from 'next/link';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdMail } from 'react-icons/md';
@@ -9,15 +8,15 @@ import { socialLinks } from '../utils/helpers';
 const Footer = () => {
   return (
     <footer className='bg-[#1C211C] text-white py-24 mt-auto'>
-      <Grid templateColumns='repeat(4, 1fr)' gap={8} className='container'>
-        <GridItem>
+      <div className='container flex flex-col md:grid md:grid-cols-4 gap-12'>
+        <div>
           <h1 className='text-2xl font-bold'>LOGO</h1>
           <p className='mt-4'>
             Where cleanliness meets affordability and technology to meet our
             client&apos;s needs
           </p>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>OUR SERVICES</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
@@ -33,8 +32,8 @@ const Footer = () => {
               <Link href='/'>Disinfectant Cleaning</Link>
             </li>
           </ul>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>QUICK LINKS</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
@@ -50,8 +49,8 @@ const Footer = () => {
               <Link href='/'>Services</Link>
             </li>
           </ul>
-        </GridItem>
-        <GridItem>
+        </div>
+        <div>
           <h2 className='text-lg font-bold'>GET IN TOUCH</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
@@ -87,8 +86,8 @@ const Footer = () => {
               </div>
             </li>
           </ul>
-        </GridItem>
-      </Grid>
+        </div>
+      </div>
     </footer>
   );
 };
