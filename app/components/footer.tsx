@@ -9,8 +9,8 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <footer className='bg-[#1C211C] text-white py-16 md:py-24 mt-auto'>
-      <div className='container flex flex-col md:grid md:grid-cols-4 gap-12'>
-        <div>
+      <div className='container grid md:grid-cols-4 gap-12 md:gap-4'>
+        <div className='mr-4'>
           <Link href='/'>
             <Image
               src={'/logo/ecoexpert-white-mixed.png'}
@@ -54,7 +54,7 @@ const Footer = () => {
               <Link href='/'>Gallery</Link>
             </li>
             <li>
-              <Link href='/'>Services</Link>
+              <Link href='/services'>Services</Link>
             </li>
           </ul>
         </div>
@@ -62,22 +62,28 @@ const Footer = () => {
           <h2 className='text-lg font-bold'>GET IN TOUCH</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex items-center gap-2'>
                 <FaLocationDot />
                 <span>Brixton Close, London, United Kingdom</span>
-              </div>
+              </p>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex items-center gap-2'>
                 <FaPhone />
                 <span>+44 890-7171-298227</span>
-              </div>
+              </p>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <p className='flex flex-wrap items-center gap-2'>
                 <MdMail />
-                <span>contactus@ecoexpertsolutions.co.uk</span>
-              </div>
+                <a
+                  href='mailto:contactus@ecoexpertsolutions.co.uk'
+                  target='_blank'
+                  className='text-wrap'
+                >
+                  Contact Us
+                </a>
+              </p>
             </li>
             <li>
               <div className='flex items-center gap-10 md:gap-4 mt-4'>

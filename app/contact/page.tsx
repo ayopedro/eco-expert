@@ -56,7 +56,7 @@ const Contact = () => {
               </APIProvider>
             </div>
           </div>
-          <div className='md:absolute md:top-[-25%] md:right-0'>
+          <div className='md:absolute md:top-[-25%] md:right-4'>
             <ContactForm />
           </div>
         </div>
