@@ -72,7 +72,7 @@ const Footer = () => {
               </div>
             </li>
             <li>
-              <div className='flex items-center gap-2'>
+              <div className='flex items-center gap-10 md:gap-4 mt-4'>
                 {socialLinks.map((link) => (
                   <a
                     href={link.url}

@@ -55,10 +55,10 @@ const Services = () => {
           for excellence, reliability, and environmental responsibility.
         </p>
       </div>
-      <div className='flex flex-col md:grid md:grid-cols-3 gap-6 my-8'>
+      <div className='grid md:grid-cols-3 gap-6 my-8'>
         {SERVICES.slice(0, 5).map((service, idx) => (
           <div
-            className={idx === 0 ? 'col-span-2' : 'col-span-1'}
+            className={idx === 0 ? 'md:col-span-2' : 'col-span-1'}
             key={service.id}
           >
             <ServiceCard

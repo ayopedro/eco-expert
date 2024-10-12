@@ -38,10 +38,10 @@ const About = () => {
     <div className='h-full'>
       <section className='container text-center flex flex-col items-center gap-4 py-20'>
         <h3 className='text-lemon text-lg font-semibold'>About us</h3>
-        <h2 className='text-5xl font-medium'>
+        <h2 className='text-3xl md:text-5xl font-medium'>
           Meet the people behind the company
         </h2>
-        <p className='w-1/2 mx-auto'>
+        <p className='md:w-1/2 mx-auto'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae,
           consequatur distinctio autem quos at libero perspiciatis consequuntur
           quisquam quia? Facere?
@@ -56,8 +56,8 @@ const About = () => {
         </div>
       </section>
       <section className='bg-foreground text-white'>
-        <div className='container py-20 flex justify-between'>
-          <div className='flex flex-col gap-24 w-3/4'>
+        <div className='container py-20 flex flex-col-reverse md:flex-row gap-8 justify-between'>
+          <div className='flex flex-col md:flex-row gap-24 md:w-3/4'>
             <div>
               <h2 className='text-3xl font-medium'>Our Story</h2>
               <p className='mt-10'>
@@ -93,12 +93,12 @@ const About = () => {
       </section>
       <section className='container py-20'>
         <h2 className='text-3xl font-medium text-center'>Meet the team</h2>
-        <p className='text-center w-1/2 mx-auto mt-5'>
+        <p className='text-center md:w-1/2 mx-auto mt-5'>
           At the company, we make sure we deliver the best cleaning services to
           our clients, be it full house cleaning or express cleaning, even
           office cleaning
         </p>
-        <div className='grid grid-cols-3 gap-10 my-10'>
+        <div className='grid md:grid-cols-3 gap-10 my-10'>
           {team.map((person) => (
             <div key={person.name} className='flex flex-col gap-4'>
               <div className='rounded-md bg-gray-100'>
