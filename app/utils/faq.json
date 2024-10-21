@@ -1,22 +1,91 @@
 [
   {
     "id": 1,
-    "question": "What other services do you offer?",
-    "answer": "We offer a wide range of services, including cleaning, laundry, and more."
+    "question": "What is EcoExpert Cleaning Solution Services Ltd?",
+    "answer": "EcoExpert Cleaning Solution Services Ltd is a company that provides environmentally friendly cleaning solutions for residential and commercial clients. We focus on sustainability, using non-toxic, biodegradable cleaning products that are safe for both people and the environment."
   },
   {
     "id": 2,
-    "question": "How do I book a service?",
-    "answer": "You can book a service by clicking the 'Book us' button on the top right corner of the page."
+    "question": "What services do you offer?",
+    "answer": "We offer a wide range of cleaning services, including:",
+    "list": [
+      "Residential cleaning",
+      "Office cleaning",
+      "Window cleaning",
+      "Carpet cleaning",
+      "Deep cleaning",
+      "General cleaning",
+      "Customized cleaning contracts for offices, businesses, and retail spaces",
+      "Gardening and fumigation services"
+    ]
   },
   {
     "id": 3,
-    "question": "Where is your office located?",
-    "answer": "We offer a wide range of services, including cleaning, laundry, and more."
+    "question": "How is EcoExpert different from other cleaning services?",
+    "answer": "Our main difference is our commitment to eco-friendly cleaning practices. We use non-toxic, biodegradable products that are safe for families, pets, and the environment. We also customize our services to meet specific client needs and ensure high-quality results with our highly trained staff."
   },
   {
     "id": 4,
-    "question": "How long does it take to clean a newly built office space?",
-    "answer": "We offer a wide range of services, including cleaning, laundry, and more."
+    "question": "Are your cleaning products safe for children and pets?",
+    "answer": "Yes, all the products we use are eco-friendly, non-toxic, and biodegradable, making them safe for households with children and pets."
+  },
+  {
+    "id": 5,
+    "question": "Do you offer one-time cleaning services, or do I need to sign a contract?",
+    "answer": "We offer both options. You can book a one-time cleaning service, or if you need regular cleaning, we offer customizable contracts to suit your needs, whether for residential or commercial spaces."
+  },
+  {
+    "id": 6,
+    "question": "What areas do you serve?",
+    "answer": "We serve both residential and commercial clients across England and Wales. We also cater to clients who are particularly focused on eco-friendly and sustainable cleaning solutions."
+  },
+  {
+    "id": 7,
+    "question": "Can I get a customized cleaning package?",
+    "answer": "Absolutely! We specialize in creating tailored cleaning packages to meet the specific requirements of each client, whether it's for a one-time job or an ongoing contract"
+  },
+  {
+    "id": 8,
+    "question": "How do I book your services?",
+    "answer": "You can book our services by visiting our website, calling our customer service line, or sending an inquiry via email. We'll be happy to discuss your needs and provide a quote."
+  },
+  {
+    "id": 9,
+    "question": "Do you offer commercial cleaning services?",
+    "answer": "Yes, we provide commercial cleaning services for offices, retail stores, restaurants, and other business premises. Our services are flexible and designed to minimize disruption to your business while maintaining a clean and eco-friendly environment."
+  },
+  {
+    "id": 10,
+    "question": "What are the benefits of using eco-friendly cleaning products?",
+    "answer": "Eco-friendly products help reduce harmful chemical exposure, protect indoor air quality, and are safer for both the environment and the people in the space being cleaned. They also help reduce the environmental footprint associated with traditional cleaning methods"
+  },
+  {
+    "id": 11,
+    "question": "Can you handle large-scale cleaning projects for businesses?",
+    "answer": "Yes, we have the expertise and resources to manage large-scale cleaning projects for commercial clients. We offer customized cleaning contracts to meet the specific needs of each business."
+  },
+  {
+    "id": 12,
+    "question": "How do you ensure quality in your cleaning services?",
+    "answer": "We conduct regular audits, seek customer feedback, and use a quality control system to ensure we meet the highest standards. Our staff is also highly trained in the latest eco-friendly cleaning techniques."
+  },
+  {
+    "id": 13,
+    "question": "Do you offer any additional services besides cleaning?",
+    "answer": "Yes, in addition to cleaning services, we offer gardening and fumigation services for both residential and commercial clients."
+  },
+  {
+    "id": 14,
+    "question": "What type of clients do you work with?",
+    "answer": "We primarily work with two types of clients:",
+    "list": [
+      "Environmentally Responsible Households: Families that prioritize eco-friendly, non-toxic cleaning methods",
+      "Corporate Clients: Businesses looking to adopt green cleaning practices to appeal to eco-conscious consumers and stakeholders."
+    ]
+  },
+  {
+    "id": 15,
+    "question": "How can I learn more about your services?",
+    "answer": "You can learn more by visiting our website, contacting us directly, or following our social media platforms for updates and special offers. We're always happy to provide more information and answer any specific questions you may have."
   }
 ]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Gardening & Fumigation services",
+    "image": "/assets/fumigation.webp"
+  },
+  {
+    "id": 4,
+    "title": "General Cleaning",
+    "image": "/assets/general-cleaning.webp"
+  },
+  {
+    "id": 2,
+    "title": "Window Cleaning",
+    "image": "/assets/window-cleaning.webp"
+  },
+  {
+    "id": 3,
+    "title": "Deep Cleaning",
+    "image": "/assets/deep-cleaning.webp"
+  },
+  {
+    "id": 5,
+    "title": "Carpet Cleaning",
+    "image": "/assets/carpet-cleaning.webp"
+  },
+  {
+    "id": 6,
+    "title": "Customized cleaning contracts for offices, businesses and retail spaces",
+    "image": "/assets/office-space.webp"
+  }
+]

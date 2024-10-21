@@ -1,26 +1,22 @@
-import Image from 'next/image';
-import { SERVICES } from '../components/services';
 import FaqComponent from '../components/faq';
+import FAQs from '../utils/faq.json';
+import SERVICES from '../utils/services.json';
+
 const Services = () => {
   return (
     <div className='h-full bg-white'>
-      <section className='container text-center flex flex-col items-center gap-4 py-10 md:py-20'>
-        <h3 className='text-lemon text-lg font-semibold'>Services</h3>
-        <h2 className='text-3xl md:text-5xl font-medium'>
-          We are passionate about cleaning
-        </h2>
-        <p className='md:w-1/2 mx-auto'>
-          We are committed to expanding our market presence by targeting
-          eco-conscious homes and businesses. Our goal is to build a reputation
-          for excellence, reliability, and environmental responsibility.
-        </p>
-        <div className='mt-10'>
-          <Image
-            src='/assets/cleaning-materials.png'
-            alt='about'
-            width={1000}
-            height={1000}
-          />
+      <section className='h-[calc(100vh-200px)] bg-services bg-cover bg-center bg-no-repeat'>
+        <div className='container text-white text-center flex flex-col items-center justify-center gap-4 py-10 md:py-20 h-full'>
+          <h3 className='text-lemon text-lg font-semibold'>Services</h3>
+          <h2 className='text-3xl md:text-5xl font-bold'>
+            We are passionate about cleaning
+          </h2>
+          <p className='md:w-1/2 mx-auto md:text-xl'>
+            We are committed to expanding our market presence by targeting
+            eco-conscious homes and businesses. Our goal is to build a
+            reputation for excellence, reliability, and environmental
+            responsibility.
+          </p>
         </div>
       </section>
       <section className='bg-background'>
@@ -44,7 +40,7 @@ const Services = () => {
         </div>
       </section>
       <section>
-        <FaqComponent />
+        <FaqComponent faqs={FAQs.slice(0, 5)} />
       </section>
     </div>
   );

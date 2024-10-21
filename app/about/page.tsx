@@ -1,66 +1,25 @@
 import Image from 'next/image';
 
-const team = [
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-1.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-2.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-3.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-4.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-5.png',
-  },
-  {
-    name: 'John Doe',
-    role: 'CEO',
-    image: '/assets/person-6.png',
-  },
-];
-
 const About = () => {
   return (
     <div className='h-full'>
-      <section className='container text-center flex flex-col items-center gap-4 py-20'>
-        <h3 className='text-lemon text-lg font-semibold'>About us</h3>
-        <h2 className='text-3xl md:text-5xl font-medium'>
-          Meet the people behind the company
-        </h2>
-        <p className='md:w-1/2 mx-auto'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae,
-          consequatur distinctio autem quos at libero perspiciatis consequuntur
-          quisquam quia? Facere?
-        </p>
-        <div className='mt-10'>
-          <Image
-            src='/assets/about.png'
-            alt='about'
-            width={1000}
-            height={1000}
-          />
+      <section className='h-[calc(100vh-200px)] bg-about bg-cover bg-center bg-no-repeat'>
+        <div className='container text-white text-center flex flex-col items-center justify-center gap-4 py-20 h-full'>
+          <h3 className='text-lemon text-lg font-semibold'>About us</h3>
+          <h2 className='text-3xl md:text-5xl font-bold'>What we are</h2>
+          <p className='md:w-1/2 mx-auto md:text-xl'>
+            At the company, we make sure we deliver the best cleaning services
+            to our clients, be it full house cleaning or express cleaning, even
+            office cleaning
+          </p>
         </div>
       </section>
       <section className='bg-foreground text-white'>
         <div className='container py-20 flex flex-col-reverse md:flex-row gap-8 justify-between'>
-          <div className='flex flex-col md:flex-row gap-24 md:w-3/4'>
+          <div className='flex flex-col gap-12 md:w-3/4'>
             <div>
               <h2 className='text-3xl font-medium'>Our Story</h2>
-              <p className='mt-10'>
+              <p className='mt-5'>
                 EcoExpert Cleaning Solution Services Ltd is a leading provider
                 of environmentally friendly cleaning solutions. Registered as a
                 private limited company in England and Wales, we are committed
@@ -72,7 +31,7 @@ const About = () => {
             </div>
             <div>
               <h2 className='text-3xl font-medium'>Our Mission</h2>
-              <p className='mt-10'>“Let Us Make It Clean and Sparkle Always”</p>
+              <p className='mt-5'>“Let Us Make It Clean and Sparkle Always”</p>
               <p className='mt-5'>
                 At EcoExpert, our mission is to set a new benchmark for
                 conscious cleaning services in the industry. We aim to provide
@@ -83,38 +42,12 @@ const About = () => {
           </div>
           <div className='w-full flex justify-end'>
             <Image
-              src='/assets/about-2.png'
+              src='/assets/meeting-room.webp'
               alt='about'
               width={661}
               height={721}
             />
           </div>
-        </div>
-      </section>
-      <section className='container py-20'>
-        <h2 className='text-3xl font-medium text-center'>Meet the team</h2>
-        <p className='text-center md:w-1/2 mx-auto mt-5'>
-          At the company, we make sure we deliver the best cleaning services to
-          our clients, be it full house cleaning or express cleaning, even
-          office cleaning
-        </p>
-        <div className='grid md:grid-cols-3 gap-10 my-10'>
-          {team.map((person) => (
-            <div key={person.name} className='flex flex-col gap-4'>
-              <div className='rounded-md bg-gray-100'>
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  width={500}
-                  height={320}
-                />
-              </div>
-              <div className='text-center'>
-                <h3>{person.name}</h3>
-                <p>{person.role}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
     </div>

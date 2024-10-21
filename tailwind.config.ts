@@ -16,8 +16,14 @@ const config: Config = {
         mint: '#E0EBE0',
       },
       backgroundImage: {
-        hero: "url('/assets/hero.png')",
-        contact: "url('/assets/contact-hero.png')",
+        hero: "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/industrial-cleaning.webp')",
+        contact:
+          "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/contact.webp')",
+        about:
+          'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/conference-room.webp)',
+        services:
+          'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/hero.webp)',
+        faqs: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/faqs.webp')",
       },
     },
   },

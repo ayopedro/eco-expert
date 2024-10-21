@@ -11,6 +11,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { ContactSchema } from '../utils/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
+import services from '../utils/services.json';
 
 type FormValues = {
   firstName: string;
@@ -113,9 +114,11 @@ export const ContactForm = () => {
                 required: 'Kindly select a service',
               })}
             >
-              <option value='option1'>Option 1</option>
-              <option value='option2'>Option 2</option>
-              <option value='option3'>Option 3</option>
+              {services.map((service) => (
+                <option key={service.id} value={service.title}>
+                  {service.title}
+                </option>
+              ))}
             </Select>
             <FormErrorMessage>
               {errors.service?.message as string}
