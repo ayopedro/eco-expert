@@ -7,10 +7,20 @@ import {
   AccordionPanel,
 } from '@chakra-ui/react';
 import { MinusIcon, AddIcon } from '@chakra-ui/icons';
-import FAQs from '../utils/faq.json';
 import { useRouter } from 'next/navigation';
 
-const Faq = () => {
+interface FAQ {
+  id: number;
+  question: string;
+  answer: string;
+  list?: string[];
+}
+
+interface FAQProps {
+  faqs: FAQ[];
+}
+
+const Faq = ({ faqs }: FAQProps) => {
   const router = useRouter();
   return (
     <section className='bg-white py-16 md:py-32'>
@@ -24,7 +34,7 @@ const Faq = () => {
         </div>
         <div className='md:w-3/4 mt-10 mx-auto'>
           <Accordion allowMultiple>
-            {FAQs.map((faq) => (
+            {faqs.map((faq) => (
               <AccordionItem key={faq.id}>
                 {({ isExpanded }) => (
                   <>
@@ -38,7 +48,16 @@ const Faq = () => {
                         )}
                       </div>
                     </AccordionButton>
-                    <AccordionPanel>{faq.answer}</AccordionPanel>
+                    <AccordionPanel>
+                      <p>{faq.answer}</p>
+                      {faq.list && (
+                        <ul className='list-disc pl-4 mt-4'>
+                          {faq.list.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </AccordionPanel>
                   </>
                 )}
               </AccordionItem>

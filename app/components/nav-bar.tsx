@@ -12,6 +12,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import BookUsButton from './book-us-btn';
 
 const links = [
   {
@@ -70,7 +71,7 @@ const NavBar = () => {
               </li>
             ))}
           </ul>
-          <button className='btn btn-outline'>Book us</button>
+          <BookUsButton variant='outline' />
         </div>
         <button ref={btnRef} onClick={onOpen} className='md:hidden'>
           <HamburgerIcon fontSize={20} />
@@ -103,7 +104,7 @@ const NavBar = () => {
                 </li>
               ))}
             </ul>
-            <button className='btn btn-outline'>Book us</button>
+            <BookUsButton variant='outline' />
           </DrawerContent>
         </Drawer>
       </div>

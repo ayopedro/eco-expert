@@ -5,6 +5,7 @@ import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdMail } from 'react-icons/md';
 import { socialLinks } from '../utils/helpers';
 import Image from 'next/image';
+import { Stack } from '@chakra-ui/react';
 
 const Footer = () => {
   return (
@@ -20,24 +21,32 @@ const Footer = () => {
             />
           </Link>
           <p className='mt-4'>
-            Where cleanliness meets affordability and technology to meet our
-            client&apos;s needs
+            All advancements in cleaning and services at your doorstep
           </p>
+          <div className='flex items-center gap-10 md:gap-4 mt-4'>
+            {socialLinks.map((link) => (
+              <a
+                href={link.url}
+                target='_blank'
+                key={link.name}
+                className='text-2xl'
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
         <div>
           <h2 className='text-lg font-bold'>OUR SERVICES</h2>
           <ul className='flex flex-col gap-4 mt-4'>
+            <li>Window Cleaning</li>
+            <li>Carpet Cleaning</li>
+            <li>Deep Cleaning</li>
+            <li>General Cleaning</li>
+            <li>Gardening and Fumigation Services</li>
             <li>
-              <Link href='/'>Office Cleaning</Link>
-            </li>
-            <li>
-              <Link href='/'>Express Cleaning</Link>
-            </li>
-            <li>
-              <Link href='/'>Household Cleaning</Link>
-            </li>
-            <li>
-              <Link href='/'>Disinfectant Cleaning</Link>
+              Customized cleaning contracts for offices, businesses and retail
+              spaces
             </li>
           </ul>
         </div>
@@ -50,9 +59,9 @@ const Footer = () => {
             <li>
               <Link href='/contact'>Contact</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href='/'>Gallery</Link>
-            </li>
+            </li> */}
             <li>
               <Link href='/services'>Services</Link>
             </li>
@@ -62,15 +71,20 @@ const Footer = () => {
           <h2 className='text-lg font-bold'>GET IN TOUCH</h2>
           <ul className='flex flex-col gap-4 mt-4'>
             <li>
-              <p className='flex items-center gap-2'>
+              <p className='flex items-baseline gap-2'>
                 <FaLocationDot />
-                <span>Brixton Close, London, United Kingdom</span>
+                <Stack>
+                  <span>Suite RA01,</span>
+                  <span>195-197 Wood Street</span>
+                  <span>London, E17 3NU</span>
+                  <span>United Kingdom</span>
+                </Stack>
               </p>
             </li>
             <li>
               <p className='flex items-center gap-2'>
                 <FaPhone />
-                <span>+44 890-7171-298227</span>
+                <span>+44 7435 853426</span>
               </p>
             </li>
             <li>
@@ -84,20 +98,6 @@ const Footer = () => {
                   Contact Us
                 </a>
               </p>
-            </li>
-            <li>
-              <div className='flex items-center gap-10 md:gap-4 mt-4'>
-                {socialLinks.map((link) => (
-                  <a
-                    href={link.url}
-                    target='_blank'
-                    key={link.name}
-                    className='text-2xl'
-                  >
-                    {link.icon}
-                  </a>
-                ))}
-              </div>
             </li>
           </ul>
         </div>

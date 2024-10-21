@@ -7,9 +7,10 @@ import {
   FormLabel,
   Input,
   Select,
+  Textarea,
 } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
-import { ContactSchema } from '../utils/schema';
+import { BookUsSchema } from '../utils/schema';
 import { yupResolver } from '@hookform/resolvers/yup';
 import services from '../utils/services.json';
 
@@ -19,21 +20,23 @@ type FormValues = {
   email: string;
   phone?: string;
   service: string;
+  address: string;
 };
 
-export const ContactForm = () => {
+const BookUs = () => {
   const {
     handleSubmit,
     register,
     formState: { errors },
   } = useForm<FormValues>({
-    resolver: yupResolver(ContactSchema),
+    resolver: yupResolver(BookUsSchema),
     defaultValues: {
       firstName: '',
       lastName: '',
       email: '',
       phone: '',
       service: '',
+      address: '',
     },
   });
 
@@ -42,8 +45,11 @@ export const ContactForm = () => {
   }
 
   return (
-    <div className='bg-white rounded-lg p-6 h-fit text-foreground'>
-      <h2 className='text-xl font-semibold'>Contact Information</h2>
+    <div className='py-5'>
+      <h2 className='text-xl font-semibold'>We are ready to serve you</h2>
+      <p className='mt-4'>
+        Please fill out your information, and a representative will contact you
+      </p>
       <Divider my={6} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className='flex flex-col md:flex-row gap-8'>
@@ -125,8 +131,25 @@ export const ContactForm = () => {
             </FormErrorMessage>
           </FormControl>
         </div>
+        <div className='mt-6'>
+          <FormControl isInvalid={!!errors.address}>
+            <FormLabel htmlFor='address' fontSize={'14px'}>
+              Address
+            </FormLabel>
+            <Textarea
+              id='address'
+              placeholder='Please enter your house address'
+              {...register('address')}
+            />
+            <FormErrorMessage>
+              {errors.address?.message as string}
+            </FormErrorMessage>
+          </FormControl>
+        </div>
         <button className='btn btn-secondary w-full mt-8'>Submit</button>
       </form>
     </div>
   );
 };
+
+export default BookUs;

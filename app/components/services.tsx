@@ -1,43 +1,5 @@
 import ServiceCard from './service-card';
-
-export const SERVICES = [
-  {
-    id: 1,
-    title: 'Gardening & Fumigation services',
-    description: 'from ₤10/4 meters',
-    image: '/assets/disinfectant-cleaning.png',
-  },
-  {
-    id: 4,
-    title: 'General Cleaning',
-    description: 'from ₤10/4 meters',
-    image: '/assets/general-cleaning.png',
-  },
-  {
-    id: 2,
-    title: 'Window Cleaning',
-    description: 'from ₤10/4 meters',
-    image: '/assets/window-cleaning.png',
-  },
-  {
-    id: 3,
-    title: 'Deep Cleaning',
-    description: 'from ₤10/4 meters',
-    image: '/assets/deep-cleaning.png',
-  },
-  {
-    id: 5,
-    title: 'Carpet Cleaning',
-    description: 'from ₤10/4 meters',
-    image: '/assets/carpet-cleaning.png',
-  },
-  {
-    id: 6,
-    title: 'Customized cleaning contracts',
-    description: 'from ₤10/4 meters',
-    image: '/assets/carpet-cleaning.png',
-  },
-];
+import SERVICES from '../utils/services.json';
 
 const Services = () => {
   return (
@@ -61,11 +23,7 @@ const Services = () => {
             className={idx === 0 ? 'md:col-span-2' : 'col-span-1'}
             key={service.id}
           >
-            <ServiceCard
-              title={service.title}
-              description={service.description}
-              image={service.image}
-            />
+            <ServiceCard title={service.title} image={service.image} />
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@ import Services from './components/services';
 import Steps from './components/steps';
 import Faq from './components/faq';
 import Contact from './components/contact';
+import FAQs from './utils/faq.json';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <Services />
       <About />
       <Steps />
-      <Faq />
+      <Faq faqs={FAQs.slice(0, 5)} />
       <Contact />
     </>
   );

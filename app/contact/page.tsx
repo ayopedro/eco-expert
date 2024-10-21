@@ -7,7 +7,7 @@ import { socialLinks } from '../utils/helpers';
 const Contact = () => {
   return (
     <div className='h-full'>
-      <div className='h-[50vh] md:h-[calc(100vh-100px)] bg-contact bg-cover bg-center bg-no-repeat'></div>
+      <div className='h-[50vh] md:h-[calc(100vh-200px)] bg-contact bg-cover bg-center bg-no-repeat' />
       <section className='bg-foreground '>
         <div className='container py-20 text-white grid md:grid-cols-2 gap-16 relative'>
           <div>
@@ -15,9 +15,10 @@ const Contact = () => {
               Get in touch with us
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
-              tempora mollitia, eos exercitationem amet eius aperiam unde
-              maiores tempore eum?
+              If you have any questions or would like to learn more about our
+              services, please don&apos;t hesitate to reach out to us.
+              We&apos;re always eager to hear from you and explore how we can
+              assist you in achieving your cleaning goals.
             </p>
             <div className='flex flex-col'>
               <h3 className='text-xl font-semibold mt-10'>
@@ -37,9 +38,12 @@ const Contact = () => {
               </div>
             </div>
             <h3 className='text-xl font-semibold mt-10'>Company address:</h3>
-            <p className='text-mint text-sm'>
-              Brixton Close, London, United Kingdom
-            </p>
+
+            <p className='text-mint'>Suite RA01,</p>
+            <p className='text-mint'>195-197 Wood Street</p>
+            <p className='text-mint'>London, E17 3NU</p>
+            <p className='text-mint'>United Kingdom</p>
+
             <div className='mt-8 md:w-[580px] h-[250px] md:h-[435px]'>
               <APIProvider
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}
