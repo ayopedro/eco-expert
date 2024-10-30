@@ -59,9 +59,6 @@ const Footer = () => {
             <li>
               <Link href='/contact'>Contact</Link>
             </li>
-            {/* <li>
-              <Link href='/'>Gallery</Link>
-            </li> */}
             <li>
               <Link href='/services'>Services</Link>
             </li>
@@ -84,7 +81,7 @@ const Footer = () => {
             <li>
               <p className='flex items-center gap-2'>
                 <FaPhone />
-                <span>+44 7435 853426</span>
+                <span>+44 (0) 3301332702</span>
               </p>
             </li>
             <li>
