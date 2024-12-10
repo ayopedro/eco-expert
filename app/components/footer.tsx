@@ -20,9 +20,7 @@ const Footer = () => {
               height={100}
             />
           </Link>
-          <p className='mt-4'>
-            All advancements in cleaning and services at your doorstep
-          </p>
+          <p className='mt-4'>Let us make it sparkle!</p>
           <div className='flex items-center gap-10 md:gap-4 mt-4'>
             {socialLinks.map((link) => (
               <a
